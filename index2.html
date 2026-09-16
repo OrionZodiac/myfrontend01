@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navbar</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Itim&family=Monomaniac+One&display=swap" rel="stylesheet"/>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    background: #0a0a0a;
+    font-family: "Courier New", monospace;
+    min-height: 100%;
+  }
+
+  /* ---------- NAVBAR ---------- */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 30px 40px;
+    background: #141414;
+    margin: 0px 80px;
+    border-radius: 0 0 10px 10px;
+  }
+  .nav-links { list-style: none; display: flex; align-items: center; gap: 40px; }
+  .nav-links a {
+    display: block; color: #e6e6e6; text-decoration: none;
+    font-size: 15px; line-height: 1; letter-spacing: .5px;
+  }
+  .nav-links a:hover { color: #fff; }
+  .socials { display: flex; align-items: center; gap: 20px; }
+  .socials a { display: block; color: #6e6e6e; font-size: 16px; line-height: 1; }
+  .socials a:hover { color: #fff; }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+    padding: 60px;
+    margin: 0 40px;
+  }
+  .hero-text { max-width: 560px; }
+  .hero-text h1,
+  .hero-text h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+  }
+  .hero-text p {
+    color: #9a9a9a;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 36px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #3d8b1f;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 20px 40px;
+    border-radius: 6px;
+    box-shadow: 0 0 25px rgba(76, 175, 46, .45);
+    transition: background .25s ease, box-shadow .25s ease, transform .25s ease;
+  }
+  .btn:hover {
+    background: #4aa626;
+    box-shadow: 0 0 35px rgba(76, 175, 46, .7);
+    transform: translateY(-2px);
+  }
+  .hero-img {
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  /* ---------- WORKED WITH ---------- */
+  .worked {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 20px 60px 90px;
+  }
+  .worked-label {
+    color: #8a8a8a;
+    font-size: 14px;
+    letter-spacing: .5px;
+    margin-bottom: 22px;
+  }
+  .logo-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .logo-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 170px;
+    padding: 22px 28px;
+    background: #101010;
+    border: 1px solid #262626;
+    border-radius: 10px;
+    color: #4a4a4a;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color .25s ease, border-color .25s ease;
+  }
+  .logo-box:hover { color: #9a9a9a; border-color: #3d3d3d; }
+  .logo-box .italic { font-style: italic; letter-spacing: 1px; }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 900px) {
+    .navbar { margin: 16px; flex-direction: column; gap: 16px; }
+    .nav-links { flex-wrap: wrap; justify-content: center; gap: 18px; }
+
+    .hero {
+      flex-direction: column-reverse;
+      text-align: center;
+      padding: 40px 20px;
+      gap: 40px;
+    }
+    .hero-text h1, .hero-text h2 { font-size: 30px; }
+    .hero-img { width: 260px; height: 260px; }
+
+    .worked { padding: 10px 20px 50px; }
+    .logo-row { justify-content: center; gap: 14px; }
+    .logo-box { min-width: 130px; padding: 16px 18px; font-size: 15px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Case Studies</a></li>
+      <li><a href="#">Testimonials</a></li>
+      <li><a href="#">Recent work</a></li>
+      <li><a href="#">Get In Touch</a></li>
+    </ul>
+    <div class="socials">
+      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#"><i class="fa-brands fa-behance"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>66194110058</h1>
+      <h2>Apisit Prachakool</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Nesciunt rem odit labore unde nemo omnis sequi hic sit
+        laudantium repellendus recusandae vitae ea laborum, ipsa
+        nisi eos autem.
+      </p>
+      <a href="#" class="btn">Let's get started <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <img src="./images/Photohere.png" alt="Profile" class="hero-img">
+  </section>
+
+  <!-- WORKED WITH -->
+  <section class="worked">
+    <p class="worked-label">Worked with</p>
+    <div class="logo-row">
+      <div class="logo-box"><i class="fa-solid fa-cloud-arrow-up"></i> ClickUp</div>
+      <div class="logo-box"><i class="fa-brands fa-dropbox"></i> Dropbox</div>
+      <div class="logo-box"><span class="italic">PAYCHEX</span></div>
+      <div class="logo-box"><i class="fa-solid fa-circle-nodes"></i> elastic</div>
+      <div class="logo-box"><i class="fa-brands fa-stripe-s"></i> stripe</div>
+    </div>
+  </section>
+
+</body>
+</html>
