@@ -4,221 +4,94 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>index2</title>
+<script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    background: #000;
-    font-family: "Inter", Arial, sans-serif;
-    color: #fff;
-    min-height: 100vh;
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          inter: ['Inter', 'sans-serif'],
+          playfair: ['"Playfair Display"', 'serif'],
+        },
+      },
+    },
   }
-
-  /* .wrapper { max-width: 1500px; margin: 0 auto; padding: 0 40px; } */
-
-  /* ---------- NAVBAR ---------- */
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1000px;
-    padding: 26px 0;
-  }
-
-  .logo {
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: .5px;
-  }
-  .logo .prompt { color: #22c55e; }
-
-  .nav-right {
-    display: flex;
-    align-items: center;
-    gap: 34px;
-  }
-
-  .nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 34px;
-  }
-  .nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    transition: color .25s ease;
-  }
-  .nav-links a:hover { color: #facc15; }
-  .nav-links a.active { color: #facc15; }
-
-  .btn-talk {
-    display: inline-block;
-    padding: 12px 30px;
-    border: 1.5px solid #fff;
-    border-radius: 999px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    transition: background .25s ease, color .25s ease;
-  }
-  .btn-talk:hover { background: #fff; color: #000; }
-
-  /* ---------- HERO ---------- */
-  .hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 100px;
-    padding: 50px 0 40px;
-  }
-
-  .hero-text { max-width: 420px; padding-left: 20px; }
-
-  .hero-text h1 {
-    font-family: "Playfair Display", serif;
-    font-size: 46px;
-    font-weight: 900;
-    line-height: 1.25;
-    margin-bottom: 20px;
-  }
-
-  .hero-text p {
-    color: #d4d4d4;
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 26px;
-  }
-
-  .hero-socials { display: flex; gap: 14px; }
-  .hero-socials a {
-    width: 42px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-    color: #000;
-    border-radius: 50%;
-    font-size: 20px;
-    text-decoration: none;
-    transition: transform .25s ease, background .25s ease;
-  }
-  .hero-socials a:hover { transform: translateY(-3px); background: #facc15; }
-
-  .hero-img {
-    width: 380px;
-    height: 380px;
-    border-radius: 50%;
-    object-fit: cover;
-    flex-shrink: 0;
-  }
-
-  /* ---------- TECH STACKS ---------- */
-  .tech {
-    text-align: center;
-    padding: 20px 0 60px;
-  }
-
-  .tech h3 {
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 26px;
-  }
-
-  .tech-icons {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 34px;
-  }
-
-  .tech-icons i {
-    font-size: 38px;
-    transition: transform .25s ease;
-  }
-  .tech-icons i:hover { transform: translateY(-6px) scale(1.1); }
-
-  /* ---------- RESPONSIVE ---------- */
-  @media (max-width: 900px) {
-    .wrapper { padding: 0 20px; }
-
-    .navbar { flex-direction: column; gap: 18px; }
-    .nav-right { flex-direction: column; gap: 18px; }
-
-    .hero {
-      flex-direction: column-reverse;
-      text-align: center;
-      gap: 36px;
-      padding: 30px 0;
-    }
-    .hero-text { padding-left: 0; }
-    .hero-text h1 { font-size: 34px; }
-    .hero-socials { justify-content: center; }
-    .hero-img { width: 250px; height: 250px; }
-
-    .tech-icons { gap: 22px; }
-    .tech-icons i { font-size: 30px; }
-  }
-</style>
+</script>
 </head>
-<body>
 
-<div class="wrapper">
+<body class="bg-black text-white font-inter">
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo"><span class="prompt">&gt;_</span>ApisiT SAU</div>
+  <div class="mx-auto px-6 md:px-10">
 
-    <div class="nav-right">
-      <ul class="nav-links">
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Portfolio</a></li>
-      </ul>
-      <a href="#" class="btn-talk">Let's talk</a>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Full Stack Web Developer !</h1>
-      <p>Hi, I'm ApisiT SAU. A passionate Full Stack Web Developer based in Thailand.</p>
-
-      <div class="hero-socials">
-        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="#"><i class="fa-brands fa-github"></i></a>
+    <!-- NAVBAR -->
+    <nav class="flex flex-col md:flex-row items-center justify-between gap-4 py-5">
+      <div class="text-2xl font-bold tracking-tight">
+        <span class="text-green-500">&gt;_</span>ApisiT SAU
       </div>
-    </div>
 
-    <img src="./images/leo.jpg" alt="Profile" class="hero-img">
-  </section>
+      <div class="flex items-center gap-6 md:gap-8">
+        <a href="#" class="text-yellow-400 font-medium transition hover:text-yellow-300">Home</a>
+        <a href="#" class="font-medium transition hover:text-yellow-400">About</a>
+        <a href="#" class="font-medium transition hover:text-yellow-400">Portfolio</a>
+        <a href="#" class="rounded-full border border-white px-6 py-2.5 text-sm font-medium transition hover:bg-white hover:text-black">
+          Let's talk
+        </a>
+      </div>
+    </nav>
 
-  <!-- TECH STACKS -->
-  <section class="tech">
-    <h3>My Tech Stacks</h3>
-    <div class="tech-icons">
-      <i class="devicon-html5-plain colored"></i>
-      <i class="devicon-css3-plain colored"></i>
-      <i class="devicon-javascript-plain colored"></i>
-      <i class="devicon-nodejs-plain colored"></i>
-      <i class="devicon-react-original colored"></i>
-      <i class="devicon-spring-plain colored"></i>
-      <i class="devicon-java-plain colored"></i>
-      <i class="devicon-figma-plain colored"></i>
-      <i class="devicon-firebase-plain colored"></i>
-    </div>
-  </section>
+    <!-- HERO -->
+    <section class="flex flex-col-reverse md:flex-row items-center justify-center gap-10 md:gap-16 py-8 md:py-12">
 
-</div>
+      <!-- ข้อความ -->
+      <div class="max-w-md text-center md:text-left">
+        <h1 class="font-playfair text-4xl md:text-5xl font-black leading-tight mb-5">
+          Full Stack Web Developer !
+        </h1>
+
+        <p class="text-neutral-300 leading-relaxed mb-7">
+          Hi, I'm ApisiT SAU. A passionate Full Stack Web Developer based in Thailand.
+        </p>
+
+        <div class="flex justify-center md:justify-start gap-3.5">
+          <a href="#" class="grid h-11 w-11 place-items-center rounded-full bg-white text-lg text-black transition hover:-translate-y-1 hover:bg-yellow-400">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="grid h-11 w-11 place-items-center rounded-full bg-white text-lg text-black transition hover:-translate-y-1 hover:bg-yellow-400">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- รูปโปรไฟล์ + แสงเรืองหลัง -->
+      <div class="relative shrink-0">
+        <div class="bg-black"></div>
+        <img src="./images/leo.jpg" alt="Profile"
+             class="h-64 w-64 md:h-96 md:w-96 rounded-full object-cover">
+      </div>
+
+    </section>
+
+    <!-- TECH STACKS -->
+    <section class="pb-16 text-center">
+      <h3 class="mb-6 text-base font-bold">My Tech Stacks</h3>
+
+      <div class="flex flex-wrap items-center justify-center gap-6 md:gap-9 text-3xl md:text-4xl">
+        <i class="devicon-html5-plain colored transition hover:-translate-y-1.5 hover:scale-110"></i>
+        <i class="devicon-css3-plain colored transition hover:-translate-y-1.5 hover:scale-110"></i>
+        <i class="devicon-javascript-plain colored transition hover:-translate-y-1.5 hover:scale-110"></i>
+        <i class="devicon-nodejs-plain colored transition hover:-translate-y-1.5 hover:scale-110"></i>
+        <i class="devicon-react-original colored transition hover:-translate-y-1.5 hover:scale-110"></i>
+        <i class="devicon-spring-plain colored transition hover:-translate-y-1.5 hover:scale-110"></i>
+        <i class="devicon-java-plain colored transition hover:-translate-y-1.5 hover:scale-110"></i>
+        <i class="devicon-figma-plain colored transition hover:-translate-y-1.5 hover:scale-110"></i>
+        <i class="devicon-firebase-plain colored transition hover:-translate-y-1.5 hover:scale-110"></i>
+      </div>
+    </section>
+
+  </div>
 
 </body>
 </html>
